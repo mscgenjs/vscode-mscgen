@@ -15,7 +15,7 @@
             "id": "mscgen",
             "aliases": ["MscGen", "mscgen"],
             "extensions": [".msc",".mscgen",".mscin"],
-            "configuration": "./language-configuration.json"
+            "configuration": "./language-configuration.mscgen.json"
         },{
             "id": "msgenny",
             "aliases": ["MsGenny", "msgenny"],
