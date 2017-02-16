@@ -1,0 +1,44 @@
+{
+    "name": "mscgen",
+    "displayName": "MscGen",
+    "description": "MscGen syntax highlighting",
+    "version": "1.0.0",
+    "publisher": "sverweij",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "mscgen",
+            "aliases": ["MscGen", "mscgen"],
+            "extensions": [".msc",".mscgen",".mscin"],
+            "configuration": "./language-configuration.json"
+        },{
+            "id": "msgenny",
+            "aliases": ["MsGenny", "msgenny"],
+            "extensions": [".msgenny"],
+            "configuration": "./language-configuration.msgenny.json"
+        },{
+            "id": "xu",
+            "aliases": ["Xu", "Xù", "xu"],
+            "extensions": [".xu"],
+            "configuration": "./language-configuration.xu.json"
+        }],
+        "grammars": [{
+            "language": "mscgen",
+            "scopeName": "source.mscgen",
+            "path": "./syntaxes/mscgen.tmLanguage.json"
+        },{
+            "language": "msgenny",
+            "scopeName": "source.msgenny",
+            "path": "./syntaxes/msgenny.tmLanguage.json"
+        },{
+            "language": "xu",
+            "scopeName": "source.xu",
+            "path": "./syntaxes/xu.tmLanguage.json"
+        }]
+    }
+}
