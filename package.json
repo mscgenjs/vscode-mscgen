@@ -1,14 +1,31 @@
 {
-    "name": "mscgen",
+    "name": "vscode-mscgen",
     "displayName": "MscGen",
-    "description": "MscGen syntax highlighting",
+    "description": "Syntax highlighting and snippets for MscGen and two similar sequence chart languages",
     "version": "1.0.0",
-    "publisher": "sverweij",
+    "publisher": "mscgenjs",
+    "icon": "assets/icon.png",
+    "galleryBanner": {
+        "color": "#ffffff",
+        "theme": "dark"
+    },
     "engines": {
         "vscode": "^1.5.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mscgenjs/vscode-mscgen"
+    },
+    "homepage": "https://github.com/mscgenjs/vscode-mscgen",
+    "bugs": {
+        "url": "https://github.com/mscgenjs/vscode-mscgen/issues"
+    },
+    "license": "GPL-3.0",
     "categories": [
-        "Languages"
+        "Languages", "Snippets"
+    ],
+    "keywords": [
+        "MscGen", "Xù", "MsGenny"
     ],
     "contributes": {
         "languages": [{
