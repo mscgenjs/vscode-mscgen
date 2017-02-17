@@ -1,6 +1,5 @@
 # Change Log
-https://github.com/mscgenjs/vscode-language-mscgen/releases
 
-
-## [Unreleased]
-- Adds syntax highlighting for MscGen, MsGenny and Xù
+## 1.0.0
+- Syntax highlighting for MscGen, MsGenny and Xù
+- Code snippets for the same languages
