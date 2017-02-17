@@ -1,6 +1,6 @@
 # MscGen for Visual Studio Code
 
-Syntax highlighting for MscGen and two similar sequence chart languages.
+Syntax highlighting and snippets for MscGen and two similar sequence chart languages.
 
 ## Features
 - Contextualized syntax highlighting
