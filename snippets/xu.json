@@ -1,0 +1,54 @@
+{
+    "Xù skeleton": {
+        "prefix": "msc",
+        "body": [
+            "msc {",
+            "  # options",
+            "  wordwraparcs=on;",
+            "",
+            "  # entities",
+            "  ${1:a} [label=\"${2:Sender}\"];",
+            "  ${3:b} [label=\"${4:Receiver}\"];",
+            "",
+            "  # arcs",
+            "  ${1:a} =>> ${3:b} [label=\"Message\"];",
+            "  ${3:b} >> ${1:a} [label=\"Response\"];",
+            "  $5",
+            "}"
+        ],
+        "description" : "Xù function skeleton"
+    },
+    "Xù entity": {
+        "prefix": "ent",
+        "body": [
+            "${1:entity} [label=\"${2:Entity}\"]$3"
+        ],
+        "description": "Xù/ MscGen entity"
+    },
+    "Xù arc": {
+        "prefix": "arc",
+        "body": [
+            "${1:from} =>> ${2:to} [label=\"${3:Message}\"];"
+        ],
+        "description": "Xù/ MscGen arc/ message"
+    },
+    "Xù loop": {
+        "prefix": "loop",
+        "body": [
+            "${1:from} loop ${2:to} [label=\"${3:For every ...}\"] {",
+            "  $4",
+            "}"
+        ],
+        "description": "Xù loop"
+    },
+    "Xù alt": {
+        "prefix": "loaltop",
+        "body": [
+            "${1:from} alt ${2:to} [label=\"${3:Happy day}\"] {",
+            "  $5",
+            "  --- [label="${4:Alternative scenario}"];",
+            "}"
+        ],
+        "description": "Xù alt"
+    }
+}

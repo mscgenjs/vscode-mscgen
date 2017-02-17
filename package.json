@@ -39,6 +39,16 @@
             "language": "xu",
             "scopeName": "source.xu",
             "path": "./syntaxes/xu.tmLanguage.json"
+        }],
+        "snippets": [{
+            "language": "mscgen",
+            "path": "./snippets/mscgen.json"
+        },{
+            "language": "xu",
+            "path": "./snippets/xu.json"
+        },{
+            "language": "msgenny",
+            "path": "./snippets/msgenny.json"
         }]
     }
 }
