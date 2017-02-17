@@ -4,7 +4,7 @@
     "description": "Syntax highlighting and snippets for MscGen and two similar sequence chart languages",
     "version": "1.0.0",
     "publisher": "mscgenjs",
-    "icon": "./assets/icon.png",
+    "icon": "assets/icon.png",
     "galleryBanner": {
         "color": "#ffffff",
         "theme": "light"
