@@ -16,7 +16,7 @@
             "  $5",
             "}"
         ],
-        "description" : "Xù function skeleton"
+        "description" : "Xù skeleton"
     },
     "Xù entity": {
         "prefix": "ent",
@@ -37,7 +37,7 @@
         "body": [
             "${1:from} loop ${2:to} [label=\"${3:For every ...}\"] {",
             "  $4",
-            "}"
+            "};"
         ],
         "description": "Xù loop"
     },
@@ -47,7 +47,7 @@
             "${1:from} alt ${2:to} [label=\"${3:Happy day}\"] {",
             "  $5",
             "  --- [label="${4:Alternative scenario}"];",
-            "}"
+            "};"
         ],
         "description": "Xù alt"
     }

@@ -16,7 +16,7 @@
             "  $5",
             "}"
         ],
-        "description" : "MscGen function skeleton"
+        "description" : "MscGen skeleton"
     },
     "MscGen entity": {
         "prefix": "ent",
