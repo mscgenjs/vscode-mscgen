@@ -2,7 +2,7 @@
     "name": "vscode-mscgen",
     "displayName": "MscGen",
     "description": "Syntax highlighting and snippets for MscGen and two similar sequence chart languages",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "mscgenjs",
     "icon": "assets/icon.png",
     "galleryBanner": {
