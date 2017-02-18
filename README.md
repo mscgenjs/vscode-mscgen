@@ -2,6 +2,8 @@
 
 Syntax highlighting and snippets for MscGen and two similar sequence chart languages.
 
+![demo](assets/demo.gif)
+
 ## Features
 - Contextualized syntax highlighting
 - Inline expression folding
