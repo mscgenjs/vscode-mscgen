@@ -28,7 +28,7 @@
     "MscGen arc": {
         "prefix": "arc",
         "body": [
-            "${1:from} =>> ${2:to} [label=\"${3:Message}\"];"
+            "${1:from} =>> ${2:to} [label=\"${3:Message}\"];$4"
         ],
         "description": "Xù/ MscGen arc"
     }
