@@ -28,7 +28,7 @@
     "Xù arc": {
         "prefix": "arc",
         "body": [
-            "${1:from} =>> ${2:to} [label=\"${3:Message}\"];"
+            "${1:from} =>> ${2:to} [label=\"${3:Message}\"];$4"
         ],
         "description": "Xù/ MscGen arc/ message"
     },
@@ -46,7 +46,7 @@
         "body": [
             "${1:from} alt ${2:to} [label=\"${3:Happy day}\"] {",
             "  $5",
-            "  --- [label="${4:Alternative scenario}"];",
+            "  --- [label=\"${4:Alternative scenario}\"];",
             "};"
         ],
         "description": "Xù alt"
