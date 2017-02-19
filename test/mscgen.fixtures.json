@@ -1,0 +1,172 @@
+[
+    {
+        "name": "empty",
+        "input": "",
+        "output": [{ "startIndex": 0, "endIndex": 1, "scopes": [ "source.mscgen" ] }]
+    },{
+        "name": "minimal",
+        "input": "msc{}",
+        "output": [ 
+            { "startIndex": 0, "endIndex": 3, "scopes": [ "source.mscgen", "storage.type.mscgen" ] }, 
+            { "startIndex": 3, "endIndex": 4, "scopes": [ "source.mscgen", "storage.type.mscgen", "punctuation.definition.program.end.mscgen" ] }, 
+            { "startIndex": 4, "endIndex": 5, "scopes": [ "source.mscgen", "punctuation.definition.program.end.mscgen" ] } 
+        ]
+    },{
+        "name": "invalid start token",
+        "input": "fout{}",
+        "output": [ 
+            { "startIndex": 0, "endIndex": 1, "scopes": [ "source.mscgen", "invalid.illegal.mscgen" ] }, 
+            { "startIndex": 1, "endIndex": 2, "scopes": [ "source.mscgen", "invalid.illegal.mscgen" ] },
+            { "startIndex": 2, "endIndex": 3, "scopes": [ "source.mscgen", "invalid.illegal.mscgen" ] },
+            { "startIndex": 3, "endIndex": 4, "scopes": [ "source.mscgen", "invalid.illegal.mscgen" ] },
+            { "startIndex": 4, "endIndex": 5, "scopes": [ "source.mscgen", "invalid.illegal.mscgen" ] },
+            { "startIndex": 5, "endIndex": 6, "scopes": [ "source.mscgen", "invalid.illegal.mscgen" ] }
+        ]
+    },{
+        "name": "option",
+        "input": "msc{wordwraparcs=on;}",
+        "output": [ 
+            { "startIndex": 0, "endIndex": 3, "scopes": [ "source.mscgen", "storage.type.mscgen" ] }, 
+            { "startIndex": 3, "endIndex": 4, "scopes": [ "source.mscgen", "storage.type.mscgen", "punctuation.definition.program.end.mscgen" ] },
+            { "startIndex": 4, "endIndex": 16, "scopes": [ "source.mscgen", "storage.modifier.mscgen" ] },
+            { "startIndex": 16, "endIndex": 17, "scopes": [ "source.mscgen", "storage.type.mscgen" ] },
+            { "startIndex": 17, "endIndex": 19, "scopes": [ "source.mscgen", "constant.language.mscgen" ] },
+            { "startIndex": 19, "endIndex": 20, "scopes": [ "source.mscgen", "punctuation.definition.option.end.mscgen" ] },
+            { "startIndex": 20, "endIndex": 21, "scopes": [ "source.mscgen", "punctuation.definition.program.end.mscgen" ] } 
+        ]
+    },{
+        "name": "options",
+        "input": "msc{wordwraparcs=on,width=123;}",
+        "output": [ 
+            { "startIndex": 0, "endIndex": 3, "scopes": [ "source.mscgen", "storage.type.mscgen" ] }, 
+            { "startIndex": 3, "endIndex": 4, "scopes": [ "source.mscgen", "storage.type.mscgen", "punctuation.definition.program.end.mscgen" ] },
+            
+            { "startIndex": 4, "endIndex": 16, "scopes": [ "source.mscgen", "storage.modifier.mscgen" ] },
+            { "startIndex": 16, "endIndex": 17, "scopes": [ "source.mscgen", "storage.type.mscgen" ] },
+            { "startIndex": 17, "endIndex": 19, "scopes": [ "source.mscgen", "constant.language.mscgen" ] },
+            { "startIndex": 19, "endIndex": 20, "scopes": [ "source.mscgen", "punctuation.definition.option.end.mscgen" ] },
+            { "startIndex": 20, "endIndex": 25, "scopes": [ "source.mscgen", "storage.modifier.mscgen" ] },
+            { "startIndex": 25, "endIndex": 26, "scopes": [ "source.mscgen", "storage.type.mscgen" ] },
+            { "startIndex": 26, "endIndex": 29, "scopes": [ "source.mscgen", "constant.numeric.mscgen" ] },
+            { "startIndex": 29, "endIndex": 30, "scopes": [ "source.mscgen", "punctuation.definition.option.end.mscgen" ] },
+
+            { "startIndex": 30, "endIndex": 31, "scopes": [ "source.mscgen", "punctuation.definition.program.end.mscgen" ] } 
+        ]
+    },{
+        "name": "entities",
+        "input": "msc{anentity, anotherentity;}",
+        "output": [ 
+            { "startIndex": 0, "endIndex": 3, "scopes": [ "source.mscgen", "storage.type.mscgen" ] }, 
+            { "startIndex": 3, "endIndex": 4, "scopes": [ "source.mscgen", "storage.type.mscgen", "punctuation.definition.program.end.mscgen" ] },
+
+            { "startIndex": 4, "endIndex": 12, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 12, "endIndex": 13, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+            { "startIndex": 13, "endIndex": 14, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 14, "endIndex": 27, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 27, "endIndex": 28, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+
+            { "startIndex": 28, "endIndex": 29, "scopes": [ "source.mscgen", "punctuation.definition.program.end.mscgen" ] } 
+        ]
+    },{
+        "name": "arc",
+        "input": "msc{anentity, anotherentity; anentity =>> anotherentity;}",
+        "output": [ 
+            { "startIndex": 0, "endIndex": 3, "scopes": [ "source.mscgen", "storage.type.mscgen" ] }, 
+            { "startIndex": 3, "endIndex": 4, "scopes": [ "source.mscgen", "storage.type.mscgen", "punctuation.definition.program.end.mscgen" ] },
+
+            { "startIndex": 4, "endIndex": 12, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 12, "endIndex": 13, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+            { "startIndex": 13, "endIndex": 14, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 14, "endIndex": 27, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 27, "endIndex": 28, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+
+            { "startIndex": 28, "endIndex": 29, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 29, "endIndex": 37, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 37, "endIndex": 38, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 38, "endIndex": 41, "scopes": [ "source.mscgen", "storage.type.mscgen" ] },
+            { "startIndex": 41, "endIndex": 42, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 42, "endIndex": 55, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 55, "endIndex": 56, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+
+            { "startIndex": 56, "endIndex": 57, "scopes": [ "source.mscgen", "punctuation.definition.program.end.mscgen" ] } 
+        ]
+    },{
+        "name": "box arc",
+        "input": "msc{anentity, anotherentity; anentity box anotherentity;}",
+        "output": [ 
+            { "startIndex": 0, "endIndex": 3, "scopes": [ "source.mscgen", "storage.type.mscgen" ] }, 
+            { "startIndex": 3, "endIndex": 4, "scopes": [ "source.mscgen", "storage.type.mscgen", "punctuation.definition.program.end.mscgen" ] },
+
+            { "startIndex": 4, "endIndex": 12, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 12, "endIndex": 13, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+            { "startIndex": 13, "endIndex": 14, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 14, "endIndex": 27, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 27, "endIndex": 28, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+
+            { "startIndex": 28, "endIndex": 29, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 29, "endIndex": 37, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 37, "endIndex": 38, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 38, "endIndex": 41, "scopes": [ "source.mscgen", "storage.type.mscgen" ] },
+            { "startIndex": 41, "endIndex": 42, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 42, "endIndex": 55, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 55, "endIndex": 56, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+
+            { "startIndex": 56, "endIndex": 57, "scopes": [ "source.mscgen", "punctuation.definition.program.end.mscgen" ] } 
+        ]
+    },{
+        "name": "entity with attributes",
+        "input": "msc{anentity, anotherentity [label=\"entity label\"];}",
+        "output": [ 
+            { "startIndex": 0, "endIndex": 3, "scopes": [ "source.mscgen", "storage.type.mscgen" ] },
+            { "startIndex": 3, "endIndex": 4, "scopes": [ "source.mscgen", "storage.type.mscgen", "punctuation.definition.program.end.mscgen" ] },
+            { "startIndex": 4, "endIndex": 12, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 12, "endIndex": 13, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+            { "startIndex": 13, "endIndex": 14, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 14, "endIndex": 27, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 27, "endIndex": 28, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 28, "endIndex": 29, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "punctuation.definition.attributelist.begin.mscgen" ] },
+            { "startIndex": 29, "endIndex": 34, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "keyword.attribute.mscgen" ] },
+            { "startIndex": 34, "endIndex": 35, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "storage.type.mscgen" ] },
+            { "startIndex": 35, "endIndex": 36, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "string.quoted.double.mscgen", "punctuation.definition.string.begin.mscgen" ] },
+            { "startIndex": 36, "endIndex": 48, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "string.quoted.double.mscgen" ] },
+            { "startIndex": 48, "endIndex": 49, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "string.quoted.double.mscgen", "punctuation.definition.string.end.mscgen" ] },
+            { "startIndex": 49, "endIndex": 50, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "punctuation.definition.attributelist.end.mscgen" ] },
+            { "startIndex": 50, "endIndex": 51, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+            { "startIndex": 51, "endIndex": 52, "scopes": [ "source.mscgen", "punctuation.definition.program.end.mscgen" ] }
+        ]
+    },{
+        "name": "arc with attributes",
+        "input": "msc{anentity, anotherentity; anentity =>> anotherentity[label=\"message for you\", textbgcolour=\"blue\"];}",
+        "output": [ 
+            { "startIndex": 0, "endIndex": 3, "scopes": [ "source.mscgen", "storage.type.mscgen" ] },
+            { "startIndex": 3, "endIndex": 4, "scopes": [ "source.mscgen", "storage.type.mscgen", "punctuation.definition.program.end.mscgen" ] },
+            { "startIndex": 4, "endIndex": 12, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 12, "endIndex": 13, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+            { "startIndex": 13, "endIndex": 14, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 14, "endIndex": 27, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 27, "endIndex": 28, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+            { "startIndex": 28, "endIndex": 29, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 29, "endIndex": 37, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 37, "endIndex": 38, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 38, "endIndex": 41, "scopes": [ "source.mscgen", "storage.type.mscgen" ] },
+            { "startIndex": 41, "endIndex": 42, "scopes": [ "source.mscgen" ] },
+            { "startIndex": 42, "endIndex": 55, "scopes": [ "source.mscgen", "variable.identifier.mscgen" ] },
+            { "startIndex": 55, "endIndex": 56, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "punctuation.definition.attributelist.begin.mscgen" ] },
+            { "startIndex": 56, "endIndex": 61, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "keyword.attribute.mscgen" ] },
+            { "startIndex": 61, "endIndex": 62, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "storage.type.mscgen" ] },
+            { "startIndex": 62, "endIndex": 63, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "string.quoted.double.mscgen", "punctuation.definition.string.begin.mscgen" ] },
+            { "startIndex": 63, "endIndex": 78, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "string.quoted.double.mscgen" ] },
+            { "startIndex": 78, "endIndex": 79, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "string.quoted.double.mscgen", "punctuation.definition.string.end.mscgen" ] },
+            { "startIndex": 79, "endIndex": 80, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "punctuation.separator.attributelist.mscgen" ] },
+            { "startIndex": 80, "endIndex": 81, "scopes": [ "source.mscgen", "keyword.operator.mscgen" ] },
+            { "startIndex": 81, "endIndex": 93, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "keyword.attribute.mscgen" ] },
+            { "startIndex": 93, "endIndex": 94, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "storage.type.mscgen" ] },
+            { "startIndex": 94, "endIndex": 95, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "string.quoted.double.mscgen", "punctuation.definition.string.begin.mscgen" ] },
+            { "startIndex": 95, "endIndex": 99, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "string.quoted.double.mscgen" ] },
+            { "startIndex": 99, "endIndex": 100, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "string.quoted.double.mscgen", "punctuation.definition.string.end.mscgen" ] },
+            { "startIndex": 100, "endIndex": 101, "scopes": [ "source.mscgen", "keyword.operator.mscgen", "punctuation.definition.attributelist.end.mscgen" ] },
+            { "startIndex": 101, "endIndex": 102, "scopes": [ "source.mscgen", "punctuation.separator.mscgen" ] },
+            { "startIndex": 102, "endIndex": 103, "scopes": [ "source.mscgen", "punctuation.definition.program.end.mscgen" ] }
+        ]
+    }
+]
