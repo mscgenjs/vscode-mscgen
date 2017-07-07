@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.1.0
+- adds the `wordwrapentities` and `wordwrapboxes` options to the xù and MsGenny
+  grammars
+
 ## 1.0.2
 - fixes and tweaks to the snippets
 - adds a demo screencast to the overview page
