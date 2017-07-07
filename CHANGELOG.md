@@ -3,6 +3,7 @@
 ## 1.1.0
 - adds the `wordwrapentities` and `wordwrapboxes` options to the xù and MsGenny
   grammars
+- updates development dependencies to latest
 
 ## 1.0.2
 - fixes and tweaks to the snippets
