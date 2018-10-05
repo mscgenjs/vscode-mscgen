@@ -1,7 +1,7 @@
 const test = require("tape");
 const fixtures = require("./mscgen.fixtures.json");
 
-const Registry = new require("vscode-textmate").Registry;
+const Registry = require("vscode-textmate").Registry;
 const registry = new Registry();
 const grammar = registry.loadGrammarFromPathSync("syntaxes/mscgen.tmLanguage.json");
 

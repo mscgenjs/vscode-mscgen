@@ -1,5 +1,11 @@
 # Change Log
 
+## 1.2.0
+- adds the `activate`, `deactivate` and `activation` keywords to the xù grammar
+- modernizes the dependency update process
+- updates development dependencies to latest
+- updates repository.url and categories fields to Microsoft's latest advice
+
 ## 1.1.0
 - adds the `wordwrapentities` and `wordwrapboxes` options to the xù and MsGenny
   grammars

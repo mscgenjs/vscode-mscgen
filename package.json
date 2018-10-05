@@ -1,112 +1,122 @@
 {
-    "name": "vscode-mscgen",
-    "displayName": "MscGen",
-    "description": "Syntax highlighting and snippets for MscGen and two similar sequence chart languages",
-    "version": "1.1.0",
-    "publisher": "mscgenjs",
-    "icon": "assets/icon.png",
-    "galleryBanner": {
-        "color": "#ffffff",
-        "theme": "light"
-    },
-    "engines": {
-        "vscode": "^1.5.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/mscgenjs/vscode-mscgen"
-    },
-    "homepage": "https://github.com/mscgenjs/vscode-mscgen",
-    "bugs": {
-        "url": "https://github.com/mscgenjs/vscode-mscgen/issues"
-    },
-    "license": "GPL-3.0",
-    "categories": [
-        "Languages",
-        "Snippets"
-    ],
-    "keywords": [
-        "MscGen",
-        "Xù",
-        "MsGenny"
-    ],
-    "contributes": {
-        "languages": [
-            {
-                "id": "mscgen",
-                "aliases": [
-                    "MscGen",
-                    "mscgen"
-                ],
-                "extensions": [
-                    ".msc",
-                    ".mscgen",
-                    ".mscin"
-                ],
-                "configuration": "./language-configuration.mscgen.json"
-            },
-            {
-                "id": "msgenny",
-                "aliases": [
-                    "MsGenny",
-                    "msgenny"
-                ],
-                "extensions": [
-                    ".msgenny"
-                ],
-                "configuration": "./language-configuration.msgenny.json"
-            },
-            {
-                "id": "xu",
-                "aliases": [
-                    "Xu",
-                    "Xù",
-                    "xu"
-                ],
-                "extensions": [
-                    ".xu"
-                ],
-                "configuration": "./language-configuration.xu.json"
-            }
+  "name": "vscode-mscgen",
+  "displayName": "MscGen",
+  "description": "Syntax highlighting and snippets for MscGen and two similar sequence chart languages",
+  "version": "1.1.0",
+  "publisher": "mscgenjs",
+  "icon": "assets/icon.png",
+  "galleryBanner": {
+    "color": "#ffffff",
+    "theme": "light"
+  },
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mscgenjs/vscode-mscgen"
+  },
+  "homepage": "https://github.com/mscgenjs/vscode-mscgen",
+  "bugs": {
+    "url": "https://github.com/mscgenjs/vscode-mscgen/issues"
+  },
+  "license": "GPL-3.0",
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": [
+    "MscGen",
+    "Xù",
+    "MsGenny"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "mscgen",
+        "aliases": [
+          "MscGen",
+          "mscgen"
         ],
-        "grammars": [
-            {
-                "language": "mscgen",
-                "scopeName": "source.mscgen",
-                "path": "./syntaxes/mscgen.tmLanguage.json"
-            },
-            {
-                "language": "msgenny",
-                "scopeName": "source.msgenny",
-                "path": "./syntaxes/msgenny.tmLanguage.json"
-            },
-            {
-                "language": "xu",
-                "scopeName": "source.xu",
-                "path": "./syntaxes/xu.tmLanguage.json"
-            }
+        "extensions": [
+          ".msc",
+          ".mscgen",
+          ".mscin"
         ],
-        "snippets": [
-            {
-                "language": "mscgen",
-                "path": "./snippets/mscgen.json"
-            },
-            {
-                "language": "xu",
-                "path": "./snippets/xu.json"
-            },
-            {
-                "language": "msgenny",
-                "path": "./snippets/msgenny.json"
-            }
-        ]
-    },
-    "devDependencies": {
-        "tap-spec": "4.1.1",
-        "tape": "4.7.0",
-        "vscode-textmate": "3.1.5"
-    },
-    "scripts": {
-        "test": "tape test/*.spec.js | tap-spec"
-    }
+        "configuration": "./language-configuration.mscgen.json"
+      },
+      {
+        "id": "msgenny",
+        "aliases": [
+          "MsGenny",
+          "msgenny"
+        ],
+        "extensions": [
+          ".msgenny"
+        ],
+        "configuration": "./language-configuration.msgenny.json"
+      },
+      {
+        "id": "xu",
+        "aliases": [
+          "Xu",
+          "Xù",
+          "xu"
+        ],
+        "extensions": [
+          ".xu"
+        ],
+        "configuration": "./language-configuration.xu.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mscgen",
+        "scopeName": "source.mscgen",
+        "path": "./syntaxes/mscgen.tmLanguage.json"
+      },
+      {
+        "language": "msgenny",
+        "scopeName": "source.msgenny",
+        "path": "./syntaxes/msgenny.tmLanguage.json"
+      },
+      {
+        "language": "xu",
+        "scopeName": "source.xu",
+        "path": "./syntaxes/xu.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "mscgen",
+        "path": "./snippets/mscgen.json"
+      },
+      {
+        "language": "xu",
+        "path": "./snippets/xu.json"
+      },
+      {
+        "language": "msgenny",
+        "path": "./snippets/msgenny.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.3",
+    "tap-spec": "5.0.0",
+    "tape": "4.9.1",
+    "upem": "1.0.1",
+    "vscode-textmate": "3.3.3"
+  },
+  "upem": {
+    "donotup": [
+      "vscode-textmate"
+    ]
+  },
+  "scripts": {
+    "test": "tape test/*.spec.js | tap-spec",
+    "update-dependencies": "npm-run-all upem:update upem:install test",
+    "upem:update": "npm outdated --json | upem",
+    "upem:install": "npm install"
+  }
 }
