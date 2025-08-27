@@ -7,7 +7,7 @@
             "  wordwraparcs=on;",
             "",
             "  # entities",
-            "  ${1:a} [label=\"${2:Sender}\"];",
+            "  ${1:a} [label=\"${2:Sender}\"],",
             "  ${3:b} [label=\"${4:Receiver}\"];",
             "",
             "  # arcs",
